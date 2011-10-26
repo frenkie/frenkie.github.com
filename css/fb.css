@@ -1,0 +1,552 @@
+@font-face {
+    font-family: 'EpilogNormal';
+    src: url('epilog-webfont.eot');
+    src: url('epilog-webfont.eot?#iefix') format('embedded-opentype'),
+         url('epilog-webfont.woff') format('woff'),
+         url('epilog-webfont.ttf') format('truetype'),
+         url('epilog-webfont.svg#EpilogNormal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
+body{
+    padding:0;
+    margin:0;
+}
+
+html{
+    background-color:#00aeff;
+    height:100%;
+}
+body{
+    height:100%;
+    padding: 0 10px;
+    background-color:#00aeff;/* Old browsers */
+    background: -moz-linear-gradient(top, #0189f2 0%, #00aeff 39%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0189f2), color-stop(39%,#00aeff)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #0189f2 0%,#00aeff 39%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #0189f2 0%,#00aeff 39%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, #0189f2 0%,#00aeff 39%); /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0189f2', endColorstr='#00aeff',GradientType=0 ); /* IE6-9 */
+    background: linear-gradient(top, #0189f2 0%,#00aeff 39%); /* W3C */
+    background-repeat:no-repeat;
+    min-height:400px;
+    min-width: 900px;
+    font-size:100%;
+}
+
+body,
+button,
+input,
+select,
+textarea{    
+    font-family:"Helvetica","Lucida Grande","Arial", sans-serif;     
+    color:#fff;
+}
+
+nav a,
+header h1{
+    font-family:"EpilogNormal","Helvetica","Lucida Grande","Arial", sans-serif;
+}
+
+article{
+    width:900px;
+    margin: 0 auto;
+    height:100%;
+}
+    header{
+        padding-top:7%;
+    }
+        header h1{
+            font-size:32px;
+        }
+
+        nav{
+            display:block;
+            overflow:auto;
+            padding-left:3px;
+        }
+            nav ol{
+                list-style:none;
+            }
+                nav li{
+                    float:left;
+                    padding: 0 30px 0 0;
+                }
+                nav li:last-child{
+                    padding-right:0;
+                }
+
+                    nav a,
+                    nav a:link,
+                    nav a:visited{
+                        text-decoration:none;
+                        color:#fff;
+                        font-size:30px;
+                        letter-spacing:1.2px;
+
+                        -webkit-transition: color 0.15s ease;
+                        -moz-transition: color 0.15s ease;
+                        -o-transition: color 0.15s ease;
+                        transition: color 0.15s ease;
+                    }
+                    nav a:hover,
+                    nav a:active,
+                    nav a.active,
+                    nav a.active:link,
+                    nav a.active:visited,
+                    nav a.active:hover,
+                    nav a.active:active{
+                        color:#122632;
+                    }
+
+    .tekst{
+        width: 420px;
+        float:left;
+        margin-top:22px;
+    }
+            .content{
+                line-height:22px;
+                font-size:15px;
+            }
+                .content a,
+                .content a:link,
+                .content a:visited{
+                    color:#122632;
+                    text-decoration:none;
+                }
+                .content a:active,
+                .content a:hover{
+
+                    -webkit-transition: all 0.15s ease;
+                    -moz-transition: all 0.15s ease;
+                    -o-transition: all 0.15s ease;
+                    transition: all 0.15s ease;
+
+                    color:#fff;
+                    background-color:#122632;
+                }
+
+            .content ul,
+            .content ol{
+                padding-left:22px;
+            }
+            .content ul{
+                list-style-image:url("../img/star.png");
+            }
+
+            .tekst .foto-links{
+                float:left;
+                margin: 0 22px 11px 0;
+            }
+
+            .tekst .foto-rechts{
+                float:right;
+                margin: 0 0 11px 22px;
+            }
+
+
+    ul.portfolio{
+        clear:both;
+        list-style:none;
+        overflow: auto;
+        width:700px;
+        position:relative;
+        left: -11px;
+    }
+        ul.portfolio li{
+            float:left;
+            margin:11px;
+            padding: 10px;
+
+            background-color:#fff;
+
+            -moz-box-shadow:  1px 1px 7px 3px #009fe9;
+            -webkit-box-shadow:  1px 1px 7px 3px #009fe9;
+            box-shadow: 1px 1px 7px 3px #009fe9;
+        }
+            ul.portfolio li a{
+                position:relative;
+                display:block;
+                width:130px;
+                height:130px;
+                overflow:hidden;
+                text-decoration:none;
+            }
+                ul.portfolio li .image{
+                    position:absolute;
+                    z-index:1;
+                    left:0;
+                    right:0;
+                    top:0;
+                    bottom:0;
+                }
+                    ul.portfolio li .image .overlay{
+                        position:absolute;
+                        z-index:2;
+
+                        left:0;
+                        right:0;
+                        top:0;
+                        bottom:0;
+
+                        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";                    
+                        filter: alpha(opacity=20);
+                        -moz-opacity: 0.2;
+                        -khtml-opacity: 0.2;
+                        opacity: 0.2;
+
+                        background-color:#122632;
+
+                        visibility:hidden;
+
+                        -webkit-transition: background 0.3s ease;
+                        -moz-transition: background 0.3s ease;
+                        -o-transition: background 0.3s ease;
+                        transition: background 0.3s ease;
+                    }
+                    ul.portfolio li a:hover .image .overlay{
+                        visibility:visible;
+                    }
+
+                ul.portfolio li h1{
+                    position:absolute;
+                    left:0;
+                    right:0;
+                    bottom:-22px;
+                    z-index:3;
+
+                    overflow:hidden;
+                    height:22px;
+
+                    margin:0;
+                    padding:0 5px;
+                    
+                    background-color:#fff;
+                    color:#122632;
+                    line-height:22px;
+                    font-size:15px;
+                    font-weight:normal;
+
+                    -webkit-transition: bottom 0.2s ease;
+                    -moz-transition: bottom 0.2s ease;
+                    -o-transition: bottom 0.2s ease;
+                    transition: bottom 0.2s ease;
+                }
+                    ul.portfolio li h1 span{
+                        display:block;
+                        line-height:28px;
+                    }
+                    ul.portfolio li a:hover h1,
+                    ul.portfolio li a:active h1{
+                        bottom:0;
+                    }
+
+                ul.portfolio li h2{
+                    position:absolute;
+                    right:-100%;
+                    top:0;
+                    z-index:3;
+
+                    margin:0;
+                    padding:0 5px;
+
+                    white-space:nowrap;
+
+                    background-color:#122632;
+                    color:#fff;
+                    line-height:18px;
+                    font-size:12px;
+
+                    -moz-box-shadow: -1px -1px 8px 2px #888;
+                    -webkit-box-shadow: -1px -1px 8px 2px #888;
+                    box-shadow: -1px -1px 8px 2px #888;
+
+                    -webkit-transition: right 0.1s ease;
+                    -moz-transition: right 0.1s ease;
+                    -o-transition: right 0.1s ease;
+                    transition: right 0.1s ease;
+                }
+                    ul.portfolio li a:hover h2{
+                        right:0;
+                    }
+
+    ul.gallery{
+        position:relative;
+        list-style:none;
+        width:575px;
+        float:left;
+    }
+        html.js ul.gallery{
+            height: 600px;
+            top: -70px;
+        }
+
+        ul.gallery li{
+            margin-bottom:22px;
+            float:left;
+        }
+            html.js ul.gallery li{
+                margin-bottom:0;
+                position:relative;
+                overflow:hidden;
+            }
+
+            ul.gallery li .image{
+                position:relative;
+                padding:10px;
+                background-color:#fff;
+            }
+                html.js ul.gallery li .image .overlay{
+                    position:absolute;
+                    left:0;
+                    right:0;
+                    top:0;
+                    bottom:0;
+                    display:none;
+
+                    background-color:#122632;
+                    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+                    filter: alpha(opacity=60);
+                    -moz-opacity: 0.6;
+                    -khtml-opacity: 0.6;
+                    opacity: 0.6;
+                }
+                html.js ul.gallery li.inactive .image .overlay{
+                    display:block;
+                }
+
+            ul.gallery li p{
+                margin:0;
+                line-height:22px;
+                font-size:15px;
+            }
+                html.js ul.gallery li p{
+                    background-color:#fff;
+                    color:#122632;
+                    position:absolute;
+                    z-index:2;
+                    bottom:-22px;
+                    padding: 0 10px;
+
+                    width:100%;
+
+                    -webkit-transition: bottom 0.15s ease;
+                    -moz-transition: bottom 0.15s ease;
+                    -o-transition: bottom 0.15s ease;
+                    transition: bottom 0.15s ease;
+                }
+
+                html.js ul.gallery li:hover p{
+                    bottom:0;
+                }
+                html.js ul.gallery li.inactive p{
+                    display:none;
+                }
+
+            ul.gallery li a.previous{
+                position:absolute;
+                display:block;
+
+                background: url("../img/previous.gif") no-repeat;
+
+                border:0;
+                width:44px;
+                height:44px;
+                left:-44px;
+                top:44%;
+
+                -webkit-transition: left 0.1s ease;
+                -moz-transition: left 0.1s ease;
+                -o-transition: left 0.1s ease;
+                transition: left 0.1s ease;
+            }
+                ul.gallery li:hover a.previous{
+                    left:0;
+                }
+                ul.gallery li.inactive a.previous{
+                    display:none;
+                }
+
+            ul.gallery li a.next{
+                position:absolute;
+                display:block;
+
+                background: url("../img/next.gif") no-repeat;
+
+                border:0;
+                width:44px;
+                height:44px;
+                right:-44px;
+                top:44%;
+
+                -webkit-transition: right 0.1s ease;
+                -moz-transition: right 0.1s ease;
+                -o-transition: right 0.1s ease;
+                transition: right 0.1s ease;
+            }
+                ul.gallery li:hover a.next{
+                    right:0;
+                }
+                ul.gallery li.inactive a.next{
+                    display:none;
+                }
+
+    #portfolio .contentwrapper{
+        width:300px;
+        float:left;
+        margin-right:22px;
+        overflow:auto;
+    }
+
+        #portfolio.sub .content{
+            line-height:22px;
+        }
+            #portfolio .content p{
+                margin: 0 0 22px 0;
+            }
+    
+        #portfolio.sub h1{
+            margin:22px 0 0;
+            line-height:22px;
+            font-size:22px;
+        }
+        #portfolio.sub h3{
+            margin:0 0 22px;
+            line-height:22px;
+            font-size:18px;
+        }
+
+        #portfolio.sub h2{
+            display:none;
+        }
+
+    .social-media{
+        display:block;
+        clear:left;
+        margin-bottom:22px;
+    }
+        .social-media ul{
+            list-style:none;
+            padding:0;
+            margin:0;   
+        }
+          
+            .social-media li{
+                margin-bottom:11px;   
+            }  
+            
+            .social-media a,
+            .social-media a:link,
+            .social-media a:visited{
+                text-transform:lowercase;
+                padding-left:20px;
+                font-size:15px;
+                text-decoration:none;
+                background-repeat:no-repeat;
+                background-position: left top;
+                color:#fff;
+            }                              
+                .social-media a:active,
+                .social-media a:hover{
+
+                    -webkit-transition: all 0.15s ease;
+                    -moz-transition: all 0.15s ease;
+                    -o-transition: all 0.15s ease;
+                    transition: all 0.15s ease;
+                    color:#122632;                        
+                }        
+        
+            .social-media .facebook a{
+                background-image: url("../img/icon-facebook.png");
+            }
+            
+            .social-media .twitter a{
+                background-image: url("../img/icon-twitter.png");
+            }
+            
+            .social-media .lastfm a{
+                background-image: url("../img/icon-lastfm.png");
+            }                
+
+    .social{
+        width:300px;
+    }
+        .social #facebook{
+            border:0;
+            clear:both;
+            height:30px;
+            background:transparent;
+            margin-bottom:5px;
+        }
+
+        .social .twitter-share-button{
+            clear:both;
+            margin-bottom:5px;
+        }
+
+    #mailfriend{
+        clear:both;
+        font-size:15px;
+        line-height:22px;
+    }
+        #mailfriend em{
+            display:block;
+            font-size:13px;
+            margin-bottom:22px;
+        }
+
+        .formRow{
+            overflow:auto;
+        }
+            .formLabel{
+                float:left;
+                width: 80px;
+            }
+
+            .formInput{
+                padding-bottom:11px;
+                width:340px;
+                float:left;
+            }
+
+                .formInput input,
+                .formInput textarea{
+                    color:#122632;
+                    border:0;
+                    width:330px;
+                    line-height:22px;
+                    font-size:15px;
+                    padding:0 5px;
+
+                }
+                .formInput textarea{
+                    height:88px;
+                }
+
+                .formInput input{
+                    height:22px;
+                }
+                    .formInput input.submit{
+                        width:80px;
+                        float:right;
+                    }
+        #mailfriend p.error{
+            margin-top:0;
+            color:#f00;
+        }
+
+        #mailfriend p.finished{
+            clear:both;
+        }
+
+
+    footer{
+        position:fixed;
+        bottom:10px;
+        right:10px;
+        font-size:11px;
+    }
+
+ 
