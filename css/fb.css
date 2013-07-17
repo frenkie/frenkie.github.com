@@ -15,24 +15,12 @@ body{
     margin:0;
 }
 
-html{
-    background-color:#00aeff;
-    height:100%;
-}
 body{
     height:100%;
     padding: 0 10px;
-    background-color:#00aeff;/* Old browsers */
-    background: -moz-linear-gradient(top, #0189f2 0%, #00aeff 39%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0189f2), color-stop(39%,#00aeff)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #0189f2 0%,#00aeff 39%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #0189f2 0%,#00aeff 39%); /* Opera11.10+ */
-    background: -ms-linear-gradient(top, #0189f2 0%,#00aeff 39%); /* IE10+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0189f2', endColorstr='#00aeff',GradientType=0 ); /* IE6-9 */
-    background: linear-gradient(top, #0189f2 0%,#00aeff 39%); /* W3C */
-    background-repeat:no-repeat;
-    min-height:400px;
-    min-width: 900px;
+
+    background-color:#00aeff;
+
     font-size:100%;
 }
 
@@ -45,13 +33,20 @@ textarea{
     color:#fff;
 }
 
+article,
+header,
+nav,
+section{display:block;}
+
 nav a,
 header h1{
     font-family:"EpilogNormal","Helvetica","Lucida Grande","Arial", sans-serif;
+    font-weight:normal;
 }
 
 article{
-    width:900px;
+    width:70%;
+    min-width: 320px;
     margin: 0 auto;
     height:100%;
 }
@@ -63,7 +58,6 @@ article{
         }
 
         nav{
-            display:block;
             overflow:auto;
             padding-left:3px;
         }
