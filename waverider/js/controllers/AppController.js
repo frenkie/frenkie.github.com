@@ -130,7 +130,7 @@ define(
             },
 
             _loadConfig : function () {
-                $.getJSON('/config.json').done( this._parseConfig.bind(this) );
+                $.getJSON('config.json').done( this._parseConfig.bind(this) );
             },
 
             _parseConfig : function ( cfg ) {
